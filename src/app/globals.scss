@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  background: darkblue;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 12px;
+}

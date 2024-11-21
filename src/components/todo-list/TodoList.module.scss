@@ -1,0 +1,36 @@
+.TodoList {
+  margin-top: 69px;
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    .card {
+      display: flex;
+      flex-direction: column;
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      img {
+        border-radius: 12px;
+      }
+      p {
+        padding: 8px 0;
+      }
+      .btns {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        button {
+          background: darkblue;
+          border: none;
+          outline: none;
+          color: #fff;
+          padding: 8px 20px;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+}
