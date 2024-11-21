@@ -3,20 +3,11 @@ import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-import { NextApiRequest, NextApiResponse } from "next";
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://exam-todo-git-master-gulumjans-projects.vercel.app"
-  );
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-
-  if (req.method === "OPTIONS") {
-    return res.status(200).end(); // Preflight-запрос завершен
+export const GET = async () => {
+  try {
+    const data = await prisma.todo.findMany();
+    return NextResponse.json(data, { status: 201 });
+  } catch (error) {
+    return NextResponse.json({ message: "Error" }, { status: 500 });
   }
-
-  // Основная логика вашего API
-  res.status(200).json({ message: "Success" });
-}
+};
