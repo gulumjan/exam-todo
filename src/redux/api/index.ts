@@ -5,7 +5,7 @@ import {
 } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: `https://exam-todo-seven.vercel.app`,
+  baseUrl: ``,
 });
 
 const baseQueryExtended: BaseQueryFn = (args, api, extraOptions) =>
