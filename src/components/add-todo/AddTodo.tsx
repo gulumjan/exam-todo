@@ -23,16 +23,8 @@ const AddTodo: FC = () => {
         <div className={scss.content}>
           <h1>Add Todo</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <input
-              placeholder="Title"
-              {...(register("title"), { required: true })}
-              type="text"
-            />
-            <input
-              placeholder="Image URL"
-              {...(register("image"), { required: true })}
-              type="text"
-            />
+            <input placeholder="Title" {...register("title")} type="text" />
+            <input placeholder="Image URL" {...register("image")} type="text" />
             <button type="submit">send</button>
           </form>
         </div>
